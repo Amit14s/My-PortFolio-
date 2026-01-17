@@ -32,7 +32,7 @@ const projects = [
       live: "", 
     },
 
-    image:"/projects/clueso.png", 
+    image:"projects/clueso.png", 
     category: "Full Stack",
     status: "Completed",
     year: 2025,
@@ -65,7 +65,7 @@ const projects = [
     live: ""
   },
   
-  image: '/projects/edtech.png', 
+  image: 'projects/edtech.png', 
   category: "Backend API",
   status: "Completed",
   year: 2025,
@@ -97,7 +97,7 @@ const projects = [
     live: "https://amit14s.github.io/Combined_Small_JS_Project/" 
   },
 
-  image: "/projects/combined.png", 
+  image: "projects/combined.png", 
   category: "Frontend Projects",
   status: "Completed",
   year: 2025,
@@ -128,7 +128,7 @@ const projects = [
     live: "https://pokemonapiamit.vercel.app/" 
   },
 
-  image: "/projects/pokemon.png", 
+  image: "projects/pokemon.png", 
   category: "Frontend Projects",
   status: "Completed",
   year: 2025,
