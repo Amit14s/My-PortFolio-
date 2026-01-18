@@ -57,7 +57,7 @@ function Navbar() {
     <FiLayers size={20} />
     Projects
   </a>
-  <a href="" className="hover:text-purple-500 flex items-center gap-4">
+  <a href="resume.pdf" className="hover:text-purple-500 flex items-center gap-4">
     <FiFileText size={20} />
     Resume
   </a>
@@ -121,8 +121,8 @@ function Navbar() {
     <a href="#home"  className='hover:text-purple-500 flex items-center gap-2'onClick={() => setOpen(false)}> <FiHome size={16} />Home</a>
     <a href="#skills" className='hover:text-purple-500 flex items-center gap-2' onClick={() => setOpen(false)}> <FiUser size={16} />Skills</a>
     <a href="#project" className='hover:text-purple-500 flex items-center gap-2' onClick={() => setOpen(false)}> <FiLayers size={16} />Projects</a>
-    <li className='hover:text-purple-500 flex items-center gap-2' onClick={() => setOpen(false)}><FiFileText size={16} />Resume</li>
-    <li className='hover:text-purple-500 flex items-center gap-2' onClick={() => setOpen(false)}><FiMail size={16} />Contact</li>
+    <a href="resume.pdf" className='hover:text-purple-500 flex items-center gap-2' onClick={() => setOpen(false)}><FiFileText size={16} />Resume</a>
+    <a href="#contact" className='hover:text-purple-500 flex items-center gap-2' onClick={() => setOpen(false)}><FiMail size={16} />Contact</a>
   </ul>
 </div>
 
