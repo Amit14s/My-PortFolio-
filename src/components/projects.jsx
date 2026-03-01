@@ -3,6 +3,41 @@ import { useState } from "react";
 import useVisibleCards from '../hooks/useVisible'
 function Projects(){
 const projects = [
+   {
+    id: 1,
+
+    title: "Learning Managment System Fullstack App",
+    shortDesc: "A Fullstack Edtech Platform",
+
+    description:
+     " A full-stack Learning Management System that allows instructors to create courses and students to enroll, watch lectures, and track progress with secure authentication and role-based access control.",
+
+    features: [
+      "JWT-based authentication & role management",
+      "Course creation & lecture upload",
+      "Student enrollment & progress tracking",
+      "Protected dashboard routes",
+     " REST API communication"
+    ],
+
+    techStack : {
+  frontend: ["React.js", "Redux Toolkit", "React Router", "HTML", "CSS", "Axios"],
+  backend: ["Node.js", "Express.js"],
+  database: ["MongoDB", "Mongoose"],
+  authentication: ["JWT", "bcrypt"],
+  deployment: ["Render", "Vercel"],
+  tools: ["Git", "GitHub"]
+},
+    links: {
+      github: "https://github.com/Amit14s/Edtech-LMS",
+      live: "https://edtech-lms-jet.vercel.app/", 
+    },
+
+    image:"projects/lms.png", 
+    category: "Full Stack",
+    status: "Completed",
+    year: 2026,
+  },
     {
     id: 1,
 
