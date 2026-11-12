@@ -2,45 +2,86 @@ import ProjectCard from "./ProjectCard";
 import { useState } from "react";
 import useVisibleCards from '../hooks/useVisible'
 function Projects(){
-const projects = [
-   {
-    id: 1,
 
-    title: "Learning Managment System Fullstack App",
+  const projects = [
+  {
+    id: 1,
+    title: "Messangewr – Real-Time Chat Application",
+    shortDesc: "A full-stack real-time messaging application with instant communication and secure authentication.",
+
+    description:
+      "A full-stack real-time chat application that enables users to communicate instantly through private conversations. Built using React, Node.js, Express.js, MongoDB, and Socket.IO, it supports real-time messaging, online user tracking, typing indicators, message status, and secure authentication.",
+
+    features: [
+      "JWT-based authentication and protected routes",
+      "Real-time one-to-one messaging using Socket.IO",
+      "Online/offline user status tracking",
+      "Live typing indicators",
+      "Message delivery and read status",
+      "Image and video sharing using Cloudinary",
+      "Message deletion and emoji reactions",
+      "Conversation management and unread message tracking",
+      "REST API integration with real-time socket events"
+    ],
+
+    techStack: {
+      frontend: ["React.js", "JavaScript", "CSS", "Axios"],
+      backend: ["Node.js", "Express.js", "Socket.IO"],
+      database: ["MongoDB", "Mongoose"],
+      authentication: ["JWT", "bcrypt"],
+      storage: ["Cloudinary", "Multer"],
+      tools: ["Git", "GitHub", "Postman"]
+    },
+
+    links: {
+      github: "https://github.com/Amit14s/messangewr-apk-_backend",
+      live: ""
+    },
+
+    image: "projects/messangewr.png",
+    category: "Full Stack",
+    status: "In Progress",
+    year: 2026,
+  },
+
+  {
+    id: 2,
+    title: "Learning Management System – Full Stack App",
     shortDesc: "A Fullstack Edtech Platform",
 
     description:
-     " A full-stack Learning Management System that allows instructors to create courses and students to enroll, watch lectures, and track progress with secure authentication and role-based access control.",
+      "A full-stack Learning Management System that allows instructors to create courses and students to enroll, watch lectures, and track progress with secure authentication and role-based access control.",
 
     features: [
       "JWT-based authentication & role management",
       "Course creation & lecture upload",
       "Student enrollment & progress tracking",
       "Protected dashboard routes",
-     " REST API communication"
+      "REST API communication"
     ],
 
-    techStack : {
-  frontend: ["React.js", "Redux Toolkit", "React Router", "HTML", "CSS", "Axios"],
-  backend: ["Node.js", "Express.js"],
-  database: ["MongoDB", "Mongoose"],
-  authentication: ["JWT", "bcrypt"],
-  deployment: ["Render", "Vercel"],
-  tools: ["Git", "GitHub"]
-},
-    links: {
-      github: "https://github.com/Amit14s/Edtech-LMS",
-      live: "https://edtech-lms-jet.vercel.app/", 
+    techStack: {
+      frontend: ["React.js", "Redux Toolkit", "React Router", "HTML", "CSS", "Axios"],
+      backend: ["Node.js", "Express.js"],
+      database: ["MongoDB", "Mongoose"],
+      authentication: ["JWT", "bcrypt"],
+      deployment: ["Render", "Vercel"],
+      tools: ["Git", "GitHub"]
     },
 
-    image:"projects/lms.png", 
+    links: {
+      github: "https://github.com/Amit14s/Edtech-LMS",
+      live: "https://edtech-lms-jet.vercel.app/",
+    },
+
+    image: "projects/lms.png",
     category: "Full Stack",
     status: "Completed",
     year: 2026,
   },
-    {
-    id: 1,
 
+  {
+    id: 3,
     title: "Clueso – Full Stack Web App",
     shortDesc: "Feedback management platform with secure authentication and dashboard features.",
 
@@ -64,111 +105,111 @@ const projects = [
 
     links: {
       github: "https://github.com/Amit14s/Clueso-clone-",
-      live: "", 
+      live: "",
     },
 
-    image:"projects/clueso.png", 
+    image: "projects/clueso.png",
     category: "Full Stack",
     status: "Completed",
     year: 2025,
   },
+
   {
-  id: 2,
-  
-  title: "EdTech Platform Backend API",
-  shortDesc: "RESTful backend API for an educational platform supporting users, courses, authentication, and admin actions.",
-  
-  description:
-    "A scalable REST API built for an EdTech platform that handles user authentication, course creation, content delivery, and admin controls, enabling frontend applications to interact with educational resources securely and efficiently.",
-  
-  features: [
-    "User authentication & role-based access",
-    "Course creation, retrieval, update and deletion",
-    "Secure JWT session management",
-    "REST API endpoints for content management"
-  ],
-  
-  techStack: {
-    backend: ["Node.js", "Express.js"],
-    database: ["MongoDB"],
-    auth: ["JWT", "Bcrypt"],
-    tools: ["Postman", "Git", "GitHub"]
-  },
-  
-  links: {
-    github: "https://github.com/Amit14s/EdTech-Platform-Backend-API",
-    live: ""
-  },
-  
-  image: 'projects/edtech.png', 
-  category: "Backend API",
-  status: "Completed",
-  year: 2025,
-}
-,
-   {
-  id: 4,
-  title: "Combined Small JS Projects",
-  shortDesc: "A collection of interactive JavaScript mini-projects showcasing core frontend skills with DOM manipulation and dynamic UI.",
-  
-  description:
-    "This repository includes multiple standalone JavaScript projects demonstrating fundamental skills in web development: calculator logic, dynamic lists (notes), quiz interaction, real-time weather API integration, classic games like Tic-Tac-Toe and Candy Crush, all built with HTML, CSS, and vanilla JavaScript.",
+    id: 4,
+    title: "EdTech Platform Backend API",
+    shortDesc: "RESTful backend API for an educational platform supporting users, courses, authentication, and admin actions.",
 
-  features: [
-    "Builds proficiency with DOM manipulation and events",
-    "Interactive logic for games and quizzes",
-    "Real-time API integration (weather app)",
-    "Responsive layouts and user interaction"
-  ],
+    description:
+      "A scalable REST API built for an EdTech platform that handles user authentication, course creation, content delivery, and admin controls, enabling frontend applications to interact with educational resources securely and efficiently.",
 
-  techStack: {
-    frontend: ["HTML", "CSS", "JavaScript"],
-    api: ["OpenWeather API (used by Weather App)"],
-    tools: ["Git", "GitHub"]
+    features: [
+      "User authentication & role-based access",
+      "Course creation, retrieval, update and deletion",
+      "Secure JWT session management",
+      "REST API endpoints for content management"
+    ],
+
+    techStack: {
+      backend: ["Node.js", "Express.js"],
+      database: ["MongoDB"],
+      auth: ["JWT", "Bcrypt"],
+      tools: ["Postman", "Git", "GitHub"]
+    },
+
+    links: {
+      github: "https://github.com/Amit14s/EdTech-Platform-Backend-API",
+      live: ""
+    },
+
+    image: "projects/edtech.png",
+    category: "Backend API",
+    status: "Completed",
+    year: 2025,
   },
 
-  links: {
-    github: "https://github.com/Amit14s/Combined_Small_JS_Project",
-    live: "https://amit14s.github.io/Combined_Small_JS_Project/" 
+  {
+    id: 5,
+    title: "Combined Small JS Projects",
+    shortDesc: "A collection of interactive JavaScript mini-projects showcasing core frontend skills with DOM manipulation and dynamic UI.",
+
+    description:
+      "This repository includes multiple standalone JavaScript projects demonstrating fundamental skills in web development: calculator logic, dynamic lists (notes), quiz interaction, real-time weather API integration, classic games like Tic-Tac-Toe and Candy Crush, all built with HTML, CSS, and vanilla JavaScript.",
+
+    features: [
+      "Builds proficiency with DOM manipulation and events",
+      "Interactive logic for games and quizzes",
+      "Real-time API integration (weather app)",
+      "Responsive layouts and user interaction"
+    ],
+
+    techStack: {
+      frontend: ["HTML", "CSS", "JavaScript"],
+      api: ["OpenWeather API (used by Weather App)"],
+      tools: ["Git", "GitHub"]
+    },
+
+    links: {
+      github: "https://github.com/Amit14s/Combined_Small_JS_Project",
+      live: "https://amit14s.github.io/Combined_Small_JS_Project/"
+    },
+
+    image: "projects/combined.png",
+    category: "Frontend Projects",
+    status: "Completed",
+    year: 2025,
   },
 
-  image: "projects/combined.png", 
-  category: "Frontend Projects",
-  status: "Completed",
-  year: 2025,
-}
-,  {
-  id: 5,
-  title: "Pokémon API React App",
-  shortDesc: "A React app that fetches and displays Pokémon data from a public API with filtering and detail views.",
-  
-  description:
-    "This project is a fully responsive React application that consumes the public Pokémon API to list Pokémon, show details, and support search and filtering. It demonstrates dynamic React UI, state management, API integration, and responsive layout design.",
+  {
+    id: 6,
+    title: "Pokémon API React App",
+    shortDesc: "A React app that fetches and displays Pokémon data from a public API with filtering and detail views.",
 
-  features: [
-    "Fetches Pokémon data using a public REST API",
-    "Displays list and detail views",
-    "Real-time search and filters",
-    "Responsive grid layout"
-  ],
+    description:
+      "This project is a fully responsive React application that consumes the public Pokémon API to list Pokémon, show details, and support search and filtering. It demonstrates dynamic React UI, state management, API integration, and responsive layout design.",
 
-  techStack: {
-    frontend: ["React", "JavaScript", "CSS"],
-    api: ["Pokémon Public API"],
-    tools: ["Git", "GitHub"]
-  },
+    features: [
+      "Fetches Pokémon data using a public REST API",
+      "Displays list and detail views",
+      "Real-time search and filters",
+      "Responsive grid layout"
+    ],
 
-  links: {
-    github: "https://github.com/Amit14s/Pokemon-api-react-app",
-    live: "https://pokemonapiamit.vercel.app/" 
-  },
+    techStack: {
+      frontend: ["React", "JavaScript", "CSS"],
+      api: ["Pokémon Public API"],
+      tools: ["Git", "GitHub"]
+    },
 
-  image: "projects/pokemon.png", 
-  category: "Frontend Projects",
-  status: "Completed",
-  year: 2025,
-}
+    links: {
+      github: "https://github.com/Amit14s/Pokemon-api-react-app",
+      live: "https://pokemonapiamit.vercel.app/"
+    },
 
+    image: "projects/pokemon.png",
+    category: "Frontend Projects",
+    status: "Completed",
+    year: 2025,
+  }
 ];
 const CARD_WIDTH = 385; // card width + gap
 const visibleCards = useVisibleCards();

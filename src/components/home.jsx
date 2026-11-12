@@ -1,126 +1,87 @@
+import avatar from "../assets/avtar.png";
 
-import avtar from '../assets/avtar.png'
-function Home(){
-    return(
-        <div id='home' className='min-h-screen'>
-  
-{/* below navbar hers section */}
- <div className="flex flex-col md:flex-row mt-35 ">  
-    {/* detail section */}
-        <div class=" w-full md:w-1/2
-    max-w-full
-    overflow-hidden
-    flex items-start
-    order-2 md:order-1 ">
-           <div class=' px-6 md:ml-10
-  text-center md:text-left
-  flex flex-col items-center md:items-start'>
-             <div class='text-[15px] sm:text-[15px] md:text-[17px] lg:text-[20px] text-white mb-5'>WELCOME TO MY PORTFOLIO ✨</div>
-            <div class='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white'>Hi, I’m <span class='text-3xl sm:text-2xl font-medium '> Amit Kumar</span>
-            </div>
-            <div class="text-4xl lg:text-5xl mt-6 text-center md:text-left 
-"> {/* SOFTWARE */}
-    <span
-      className="inline-block font-extrabold text-white"
-      style={{
-        clipPath: "inset(0 100% 0 0)",
-        animation: "typeSoftware 6s steps(8) infinite",
-      }}
+function Home() {
+  return (
+    <section
+      id="home"
+      className="min-h-[calc(100vh-5rem)] flex items-center px-5 sm:px-8 lg:px-16 py-14"
     >
-      Software
-    </span>
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-8">
+        {/* Intro */}
+        <div className="order-2 flex flex-col items-center text-center md:order-1 md:items-start md:text-left">
+          <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#e6dfd5] bg-[#fffefa] px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#718477] shadow-sm">
+            <span className="h-2 w-2 rounded-full bg-[#718477]" />
+            Welcome to my portfolio
+          </span>
 
-    {/* SPACE */}
-    <span>&nbsp;</span>
+          <p className="mb-3 text-lg font-medium text-[#73766f] sm:text-xl">
+            Hello, I’m
+          </p>
 
-    {/* DEVELOPER */}
-    <span
-      className="inline-block font-extrabold text-purple-700"
-      style={{
-        clipPath: "inset(0 100% 0 0)",
-        animation: "typeDeveloper 6s steps(9) infinite",
-      }}
-    >
-      Developer
-    </span>
-   <style>
-    {`
-      /* SOFTWARE types first */
-      @keyframes typeSoftware {
-        0%   { clip-path: inset(0 100% 0 0); }
-        25%  { clip-path: inset(0 0 0 0); }
-        100% { clip-path: inset(0 0 0 0); }
-      }
+          <h1 className="text-4xl font-bold tracking-tight text-[#252a27] sm:text-5xl lg:text-6xl">
+            Amit Kumar<span className="text-[#b76e52]">.</span>
+          </h1>
 
-      /* DEVELOPER starts AFTER software */
-      @keyframes typeDeveloper {
-        0%   { clip-path: inset(0 100% 0 0); }
-        35%  { clip-path: inset(0 100% 0 0); }
-        60%  { clip-path: inset(0 0 0 0); }
-        100% { clip-path: inset(0 0 0 0); }
-      }
-    `}
-  </style>
+          <h2 className="mt-5 text-3xl font-bold leading-tight tracking-tight text-[#b76e52] sm:text-4xl lg:text-5xl">
+            Software Developer
+          </h2>
 
+          <p className="mt-7 max-w-xl text-base leading-8 text-[#626760] sm:text-lg">
+            Computer Science & Engineering student with a strong foundation in
+            Data Structures & Algorithms and full-stack development. I build
+            practical web applications using Node.js, Express, MongoDB, React,
+            and SQL, with a focus on clean APIs and reliable user experiences.
+          </p>
+
+          <div className="mt-9 flex flex-wrap justify-center gap-4 md:justify-start">
+            <a
+              href="#project"
+              className="rounded-full bg-[#b76e52] px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#b76e52]/20 transition duration-300 hover:-translate-y-1 hover:bg-[#96563f]"
+            >
+              Explore Projects
+            </a>
+
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-[#d8cec2] bg-[#fffefa] px-7 py-3.5 text-sm font-semibold text-[#252a27] transition duration-300 hover:-translate-y-1 hover:border-[#b76e52] hover:text-[#96563f]"
+            >
+              Download Resume
+            </a>
+          </div>
+
+          <div className="mt-10 flex items-center gap-3 text-sm text-[#73766f]">
+            <span className="h-px w-10 bg-[#b76e52]" />
+            Building, learning, and solving problems
+          </div>
+        </div>
+
+        {/* Portrait */}
+        <div className="order-1 flex justify-center md:order-2">
+          <div className="relative w-64 sm:w-72 lg:w-[350px]">
+            <div className="absolute -inset-4 rotate-6 rounded-[2rem] bg-[#e8d8cd]" />
+            <div className="absolute -inset-4 -rotate-6 rounded-[2rem] border border-[#c7d0c7]" />
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.7rem] border-[10px] border-[#fffefa] bg-[#e9e4da] shadow-[0_24px_60px_rgba(49,43,35,0.14)]">
+              <img
+                src={avatar}
+                alt="Amit Kumar"
+                className="h-full w-full object-cover"
+              />
             </div>
-            <div class='text-emerald-100 mt-5 w-[70%] text-justify '>Computer Science & Engineering student with a strong foundation in
-Data Structures & Algorithms and full-stack development. Experienced
-in building scalable backend systems using Node.js, Express, MongoDB,
-and SQL, with 200+ DSA problems solved and hands-on project experience
-in real-time applications.
-</div>
-
-<div className='mt-15 flex gap-10 md:gap-10 lg:gap-25'> 
-    <a href='#project' className="px-9 py-3 font-bold rounded-full bg-white text-blackshadow-[0_15px_30px_rgba(0,0,0,0.65)] hover:-translate-y-1 transition-all duration-300 ease-out ">My Projects</a>
-    <a href="/resume.pdf"
-  target="_blank"
-  rel="noopener noreferrer" className=" px-9 py-3 font-bold rounded-full bg-transparent bg-white/10 backdrop-blur-xl border border-white/30 shadow-[0_45px_20px_rgba(120,40,180,0.2)] hover:-translate-y-1 transition-all duration-300 ease-out text-center">Download CV</a>
-</div>
-           </div>
-        </div>
-    {/* image section */}
-        <div className="
-  w-full md:w-1/2
-  h-[60vh] md:h-screen
-  flex justify-center items-center md:items-start
-  order-1 md:order-2 
-">
-
-           <div className="relative w-82 h-82">
-  {/* 3D FRAME */}
-              <div className="
-                  absolute inset-0
-                  rounded-3xl
-                 bg-gradient-to-br
-                from-purple-400
-                via-purple-900
-                to-purple-1200
-                p-5
-                rotate-z-10
-                -rotate-y-25 
-               shadow-[0_45px_20px_rgba(120,40,180,0.6)]
-  ">
-    <div className="
-      w-full h-full
-      rounded-2xl
-      bg-[#4c1a66]
-      flex items-center justify-center
-    ">
-      <img
-        src={avtar}
-        className="
-          w-55 h-85
-          object-cover
-          translate-y-[-15px]
-        "
-      />
-    </div>
-  </div>
-</div>
-
+            <div className="absolute -bottom-5 -right-5 rounded-2xl border border-[#e6dfd5] bg-[#fffefa] px-5 py-3 shadow-lg">
+              <p className="text-xs font-medium uppercase tracking-wider text-[#73766f]">
+                Focus
+              </p>
+              <p className="mt-1 text-sm font-bold text-[#252a27]">
+                Full-stack development
+              </p>
             </div>
+          </div>
         </div>
-        </div>
-    )
+      </div>
+    </section>
+  );
 }
-export default Home
+
+export default Home;

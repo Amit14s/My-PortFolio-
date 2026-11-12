@@ -1,1 +1,97 @@
+
 @import "tailwindcss";
+
+/* -------------------------------------------------------
+   Portfolio theme: Warm Ivory / Charcoal / Terracotta
+   The existing component structure and content are kept.
+-------------------------------------------------------- */
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  color: #252a27;
+  background: #f6f3ed;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --page: #f6f3ed;
+  --surface: #fffefa;
+  --ink: #252a27;
+  --muted: #73766f;
+  --accent: #b76e52;
+  --accent-dark: #96563f;
+  --accent-soft: #f1e2d9;
+  --sage: #718477;
+  --line: #e6dfd5;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--page);
+  color: var(--ink);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: #e8c9b9;
+  color: #252a27;
+}
+
+.portfolio-shell {
+  min-height: 100vh;
+  overflow: hidden;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 85% 8%, rgba(183, 110, 82, 0.075), transparent 25rem),
+    radial-gradient(circle at 8% 42%, rgba(113, 132, 119, 0.07), transparent 28rem),
+    var(--page);
+}
+
+/* Convert the previous dark/glass surfaces into subtle light surfaces. */
+:where([class~="bg-white/5"],
+       [class~="bg-white/10"],
+       [class~="bg-white/15"]) {
+  background-color: rgba(255, 254, 250, 0.88) !important;
+}
+
+:where([class~="border-white/20"],
+       [class~="border-white/30"]) {
+  border-color: var(--line) !important;
+}
+
+:where([class~="text-white"],
+       [class~="text-white/80"],
+       [class~="text-white/90"],
+       [class~="text-purple-100"]) {
+  color: var(--ink) !important;
+}
+
+:where([class~="text-white/70"],
+       [class~="text-white/50"],
+       [class~="text-purple-200/80"]) {
+  color: var(--muted) !important;
+}
+
+/* Terracotta is the primary accent instead of purple/blue. */
+:where([class~="text-purple-300"],
+       [class~="text-purple-400"],
+       [class~="text-purple-500"],
+       [class~="text-purple-700"]) {
+  color: var(--accent) !important;
+}
